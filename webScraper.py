@@ -15,6 +15,34 @@ from requests.exceptions import ConnectionError
 from selenium import webdriver
 import chromedriver_autoinstaller
 
+import sys
+import atexit
+import signal
+
+noElementCount = 0
+connectionResetCount = 0
+
+def jsonStuff():
+    with open('universityLinkMapping.json', 'w') as fp:
+        json.dump(universityLinkMapping, fp)
+    
+    with open('counts.txt', 'w') as fp2:
+        fp2.write("No of universities network error - " + str(connectionResetCount) + "\n")
+        fp2.write("No of universities no elemnet error - " + str(noElementCount) + "\n")
+
+# START SAVE ON KILL SECTION
+def exit_handler():
+    jsonStuff()
+
+def kill_handler(*args):
+    sys.exit(0)
+
+atexit.register(exit_handler)
+signal.signal(signal.SIGINT, kill_handler)
+signal.signal(signal.SIGTERM, kill_handler)
+# END SAVE ON KILL SECTION
+
+
 # Path to chromedriver
 path = "/Users/aishwaryamanjunath/Downloads/chromedriver-mac-x64/chromedriver.exe"
 
@@ -25,13 +53,27 @@ chromedriver_autoinstaller.install()
 universityList = ["Arizona State University Campus Immersion","Boston University","Brandeis University","California Institute of Technology","Carnegie Mellon University","Clemson University","Colorado State University-Fort Collins","Columbia University in the City of New York","Cornell University","Dartmouth College","Drexel University"]
 
 # Load existing university link mappings from JSON file (if it exists)
-f = open('universityLinkMapping.json')
+
+universityLinkMapping = {}
+try:
+	f = open('universityLinkMapping.json')
+	universityLinkMapping = json.load(f)
+	f.close()
+except FileNotFoundError:
+	print("No existing university link mappings found.")
+	pass
+
+try:
+	# universityList = pd.read_csv('all-university-classification-dataset.csv')['name'].to_list()
+    universityList = pd.read_csv('ErrorUniversities.csv')['name'].to_list()
+except:
+	print("No all university list found.")
+	pass
 
 universityWebPageNotFound = []
 
-universityLinkMapping = json.load(f)
-
 ct = 0
+
 # Iterate through the list of universities
 for university in universityList:
 	# Skip universities that are already in the mapping
@@ -115,12 +157,17 @@ for university in universityList:
 			# fileToRead.close()
 		except NoSuchElementException:
 			universityWebPageNotFound.append(university)
+			noElementCount += 1
 		except ConnectionResetError:
+			print("Connection reset on second attempt error for university - ", university)
 			universityWebPageNotFound.append(university)
+			connectionResetCount += 1
 		except Exception:
 			universityWebPageNotFound.append(university)
 	except ConnectionResetError:
+		print("Connection reset error on first attempt for university - ", university)
 		universityWebPageNotFound.append(university)
+		connectionResetCount += 1
 	except Exception:
 		universityWebPageNotFound.append(university)
 
@@ -130,11 +177,11 @@ for university in universityList:
 		driver.quit()
 
 
-with open('universityLinkMapping.json', 'w') as fp:
-	json.dump(universityLinkMapping, fp)
+jsonStuff()
 
 
 if(len(universityWebPageNotFound) > 0):
 	df = pd.DataFrame(universityWebPageNotFound, columns=["university name"])
 	df.to_csv('universityWebPageNotFound.csv', index=False)
+
 
