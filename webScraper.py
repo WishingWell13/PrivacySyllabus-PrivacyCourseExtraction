@@ -1,3 +1,4 @@
+from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -25,7 +26,7 @@ connectionResetCount = 0
 def jsonStuff():
     with open('universityLinkMapping.json', 'w') as fp:
         json.dump(universityLinkMapping, fp)
-    
+
     with open('counts.txt', 'w') as fp2:
         fp2.write("No of universities network error - " + str(connectionResetCount) + "\n")
         fp2.write("No of universities no elemnet error - " + str(noElementCount) + "\n")
@@ -47,7 +48,7 @@ signal.signal(signal.SIGTERM, kill_handler)
 path = "/Users/aishwaryamanjunath/Downloads/chromedriver-mac-x64/chromedriver.exe"
 
 # Automatically install chromedriver
-chromedriver_autoinstaller.install()
+#chromedriver_autoinstaller.install()
 
 # List of universities to search for
 universityList = ["Arizona State University Campus Immersion","Boston University","Brandeis University","California Institute of Technology","Carnegie Mellon University","Clemson University","Colorado State University-Fort Collins","Columbia University in the City of New York","Cornell University","Dartmouth College","Drexel University"]
@@ -56,19 +57,19 @@ universityList = ["Arizona State University Campus Immersion","Boston University
 
 universityLinkMapping = {}
 try:
-	f = open('universityLinkMapping.json')
-	universityLinkMapping = json.load(f)
-	f.close()
+    f = open('universityLinkMapping.json')
+    universityLinkMapping = json.load(f)
+    f.close()
 except FileNotFoundError:
-	print("No existing university link mappings found.")
-	pass
+    print("No existing university link mappings found.")
+    pass
 
 try:
-	# universityList = pd.read_csv('all-university-classification-dataset.csv')['name'].to_list()
+    # universityList = pd.read_csv('all-university-classification-dataset.csv')['name'].to_list()
     universityList = pd.read_csv('ErrorUniversities.csv')['name'].to_list()
 except:
-	print("No all university list found.")
-	pass
+    print("No all university list found.")
+    pass
 
 universityWebPageNotFound = []
 
@@ -76,112 +77,115 @@ ct = 0
 
 # Iterate through the list of universities
 for university in universityList:
-	# Skip universities that are already in the mapping
-	if(university in universityLinkMapping):
-		continue
+    # Skip universities that are already in the mapping
+    if(university in universityLinkMapping):
+        continue
 
-	ct += 1
-	# Save progress every 50 iterations
-	if(ct % 50 == 0):
-		with open('universityLinkMapping.json', 'w') as fp:
-			json.dump(universityLinkMapping, fp)
+    ct += 1
+    # Save progress every 50 iterations
+    if(ct % 50 == 0):
+        with open('universityLinkMapping.json', 'w') as fp:
+            json.dump(universityLinkMapping, fp)
 
-	# Initialize the WebDriver for Chrome
-	driver = webdriver.Chrome()
-
-	# Open Google search page
-	driver.get("https://www.google.com/")
-	driver.implicitly_wait(10) # Wait implicitly for elements to be ready
-
-	# Locate the search box, enter the search query, and submit
-	# Wait for the results to load
-	searchBox = driver.find_element("name", "q")
-	driver.implicitly_wait(10)  
-	searchBox.send_keys(university + " undergraduate computer science courses 2022-2023")
-	driver.implicitly_wait(10)
-	searchBox.send_keys(Keys.ENTER)
-	driver.implicitly_wait(10)
-
-	try:
-		# Try to find the first search result link
-		elem1= driver.find_element("xpath", "//div[@class='yuRUbf']//a")
-		driver.implicitly_wait(10)
-
-		# elem1.click()
-		# driver.implicitly_wait(10)
-		link = elem1.get_attribute('href')
-		print(link)
-		universityLinkMapping[university] = link
-
-		# Navigate to the found link and save the page source
-		driver.get(link)
-		pageSource = driver.page_source
-		fileToWrite = open("./courseListings/" + university + ".html", "w")
-		fileToWrite.write(pageSource)
-		fileToWrite.close()
-
-	except NoSuchElementException:
-		try:
-			# If the first attempt fails, retry the search
-			print("In Exception - ")
-			driver.get("https://www.google.com/")
-			driver.implicitly_wait(5)
-
-			searchBox = driver.find_element("name", "q")
-			driver.implicitly_wait(5)
-
-			searchBox.send_keys(university + " undergraduate computer science courses 2022-2023")
-			driver.implicitly_wait(5)
-
-			searchBox.send_keys(Keys.ENTER)
-			driver.implicitly_wait(5)
-
-			# Attempt to find an alternate search result link
-			elem1= driver.find_element("xpath", '//*[@id="rso"]/div[1]/div/block-component/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div[2]/div/div/div[1]/a')
-			driver.implicitly_wait(5)
-
-			# elem1.click()
-			# driver.implicitly_wait(10)
-			link = elem1.get_attribute('href')
-			print(link)
-			universityLinkMapping[university] = link
-
-			# Navigate to the found link and save the page source
-			driver.get(link)
-			pageSource = driver.page_source
-			fileToWrite = open("./courseListings/" + university + ".html", "w")
-			fileToWrite.write(pageSource)
-			fileToWrite.close()
-			# fileToRead = open(university + ".html", "r")
-			# print(fileToRead.read())
-			# fileToRead.close()
-		except NoSuchElementException:
-			universityWebPageNotFound.append(university)
-			noElementCount += 1
-		except ConnectionResetError:
-			print("Connection reset on second attempt error for university - ", university)
-			universityWebPageNotFound.append(university)
-			connectionResetCount += 1
-		except Exception:
-			universityWebPageNotFound.append(university)
-	except ConnectionResetError:
-		print("Connection reset error on first attempt for university - ", university)
-		universityWebPageNotFound.append(university)
-		connectionResetCount += 1
-	except Exception:
-		universityWebPageNotFound.append(university)
+    # Initialize the WebDriver for Chrome
 
 
-	finally:
-		# Quit the driver after each iteration to avoid resource leakage
-		driver.quit()
+    driver = webdriver.Remote('localhost:4444/wd/hub', options=webdriver.ChromeOptions())
+    driver.set_window_size(1280, 1024)
+
+    # Open Google search page
+    driver.get("https://www.google.com/")
+    driver.implicitly_wait(10) # Wait implicitly for elements to be ready
+
+    # Locate the search box, enter the search query, and submit
+    # Wait for the results to load
+    searchBox = driver.find_element("name", "q")
+    driver.implicitly_wait(10)  
+    searchBox.send_keys(university + " undergraduate computer science courses 2022-2023")
+    driver.implicitly_wait(10)
+    searchBox.send_keys(Keys.ENTER)
+    driver.implicitly_wait(10)
+
+    try:
+        # Try to find the first search result link
+        elem1= driver.find_element("xpath", "//div[@class='yuRUbf']//a")
+        driver.implicitly_wait(10)
+
+        # elem1.click()
+        # driver.implicitly_wait(10)
+        link = elem1.get_attribute('href')
+        print(link)
+        universityLinkMapping[university] = link
+
+        # Navigate to the found link and save the page source
+        driver.get(link)
+        pageSource = driver.page_source
+        fileToWrite = open("./courseListings/" + university + ".html", "w")
+        fileToWrite.write(pageSource)
+        fileToWrite.close()
+
+    except NoSuchElementException:
+        try:
+            # If the first attempt fails, retry the search
+            print("In Exception - ")
+            driver.get("https://www.google.com/")
+            driver.implicitly_wait(5)
+
+            searchBox = driver.find_element("name", "q")
+            driver.implicitly_wait(5)
+
+            searchBox.send_keys(university + " undergraduate computer science courses 2022-2023")
+            driver.implicitly_wait(5)
+
+            searchBox.send_keys(Keys.ENTER)
+            driver.implicitly_wait(5)
+
+            # Attempt to find an alternate search result link
+            elem1= driver.find_element("xpath", '//*[@id="rso"]/div[1]/div/block-component/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div[2]/div/div/div[1]/a')
+            driver.implicitly_wait(5)
+
+            # elem1.click()
+            # driver.implicitly_wait(10)
+            link = elem1.get_attribute('href')
+            print(link)
+            universityLinkMapping[university] = link
+
+            # Navigate to the found link and save the page source
+            driver.get(link)
+            pageSource = driver.page_source
+            fileToWrite = open("./courseListings/" + university + ".html", "w")
+            fileToWrite.write(pageSource)
+            fileToWrite.close()
+            # fileToRead = open(university + ".html", "r")
+            # print(fileToRead.read())
+            # fileToRead.close()
+        except NoSuchElementException:
+            universityWebPageNotFound.append(university)
+            noElementCount += 1
+        except ConnectionResetError:
+            print("Connection reset on second attempt error for university - ", university)
+            universityWebPageNotFound.append(university)
+            connectionResetCount += 1
+        except Exception:
+            universityWebPageNotFound.append(university)
+    except ConnectionResetError:
+        print("Connection reset error on first attempt for university - ", university)
+        universityWebPageNotFound.append(university)
+        connectionResetCount += 1
+    except Exception:
+        universityWebPageNotFound.append(university)
+
+
+    finally:
+        # Quit the driver after each iteration to avoid resource leakage
+        driver.quit()
 
 
 jsonStuff()
 
 
 if(len(universityWebPageNotFound) > 0):
-	df = pd.DataFrame(universityWebPageNotFound, columns=["university name"])
-	df.to_csv('universityWebPageNotFound.csv', index=False)
+    df = pd.DataFrame(universityWebPageNotFound, columns=["university name"])
+    df.to_csv('universityWebPageNotFound.csv', index=False)
 
 
