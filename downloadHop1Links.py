@@ -73,7 +73,7 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrors.loc[len(dfGeneralErrors.index)] = [university, subLink, error.strerror]
+                dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
                 if('HTTP Error 404' in str(error)):
                     df404.loc[len(df404.index)] = [university, subLink]
                 elif('HTTP Error 403' in str(error)):
@@ -113,6 +113,26 @@ dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
 
 dfGeneralErrors = pd.DataFrame(columns=['name', 'link', 'error'])
 
+import sys
+import atexit
+import signal
+
+# START SAVE ON KILL SECTION
+def exit_handler():
+    df404.to_csv(storageLocation + '404Universities.csv', index = False)
+    df403.to_csv(storageLocation + '403Universities.csv', index = False)
+    dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+    dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+    dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
+
+def kill_handler(*args):
+    sys.exit(0)
+
+atexit.register(exit_handler)
+signal.signal(signal.SIGINT, kill_handler)
+signal.signal(signal.SIGTERM, kill_handler)
+# END SAVE ON KILL SECTION    
+
 processes = []
 results = []
 # Iterate through each file in the directory
@@ -139,10 +159,10 @@ for university, process in processes:
         print("TimeoutError : ", university)
         results.append(e)
         allTimeoutFail.append(university)
-        dfGeneralErrors.loc[len(dfGeneralErrors.index)] = [university, "TimeoutError", str(e)]
+        dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
     except Exception as e:
         print("Exception %s: %s", university, e)
-        dfGeneralErrors.loc[len(dfGeneralErrors.index)] = [university, "TimeoutError", str(e)]
+        dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
         
     ct += 1
     print(str(ct) + " **************** University - " + university + "***********************")
@@ -176,23 +196,4 @@ dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index =
 pool.close()
 pool.join()
 
-
-import sys
-import atexit
-import signal
-
-# START SAVE ON KILL SECTION
-def exit_handler():
-    df404.to_csv(storageLocation + '404Universities.csv', index = False)
-    df403.to_csv(storageLocation + '403Universities.csv', index = False)
-    dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-    dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
-    dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
-
-def kill_handler(*args):
-    sys.exit(0)
-
-atexit.register(exit_handler)
-signal.signal(signal.SIGINT, kill_handler)
-signal.signal(signal.SIGTERM, kill_handler)
-# END SAVE ON KILL SECTION    
+print("All processes closed and joined.")
