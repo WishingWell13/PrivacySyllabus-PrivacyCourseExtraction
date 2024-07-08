@@ -73,7 +73,7 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
+                dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
                 if('HTTP Error 404' in str(error)):
                     df404.loc[len(df404.index)] = [university, subLink]
                 elif('HTTP Error 403' in str(error)):
@@ -159,10 +159,10 @@ for university, process in processes:
         print("TimeoutError : ", university)
         results.append(e)
         allTimeoutFail.append(university)
-        dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
+        dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
     except Exception as e:
         print("Exception %s: %s", university, e)
-        dfGeneralErrors.append({"name":university, "link": "Unknown Exception", "error": str(e)})
+        dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
         
     ct += 1
     print(str(ct) + " **************** University - " + university + "***********************")
