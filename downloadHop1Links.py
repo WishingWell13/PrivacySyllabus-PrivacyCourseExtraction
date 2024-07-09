@@ -177,7 +177,7 @@ for university, process in processes:
         # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
-        dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
+        dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, ignore_index=True)
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 print(results)
@@ -193,7 +193,7 @@ dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
 # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
 # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
-dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
+dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, ignore_index=True)
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 # Close and join the pool
