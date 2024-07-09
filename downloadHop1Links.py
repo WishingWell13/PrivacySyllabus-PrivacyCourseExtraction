@@ -87,10 +87,11 @@ def worker(university, file):
                 if isinstance(error.reason, socket.timeout):
                     logging.error('socket timed out - URL %s', subLink) 
                     logging.error('%s', error.strerror)
-                # elif isinstance(error.reason, SSLCertVerificationError):
-                #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
                 else:
                     logging.error('some other error happened: %s | %s', error.reason, subLink)
+                # elif isinstance(error.reason, SSLCertVerificationError):
+                #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
+                
             except Exception as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 print("Error while reading and writing content from link - ", subLink)
@@ -177,6 +178,7 @@ for university, process in processes:
         # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
+        print("General Errors : ", dfGeneralErrorsList)
         dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList)
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
