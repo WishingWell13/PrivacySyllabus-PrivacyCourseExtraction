@@ -74,21 +74,21 @@ def worker(university, file):
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
                 dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": error.strerror})
-                if('HTTP Error 404' in str(error)):
-                    df404.loc[len(df404.index)] = [university, subLink]
-                elif('HTTP Error 403' in str(error)):
-                    df403.loc[len(df403.index)] = [university, subLink]
-                elif('HTTP Error 429'  in str(error)):
-                    dfTooManyRequests.loc[len(dfTooManyRequests.index)] = [university, subLink]
-                else:
-                    logging.error('Data not retrieved because %s | URL: %s', error, subLink)
+                # if('HTTP Error 404' in str(error)):
+                #     df404.loc[len(df404.index)] = [university, subLink]
+                # elif('HTTP Error 403' in str(error)):
+                #     df403.loc[len(df403.index)] = [university, subLink]
+                # elif('HTTP Error 429'  in str(error)):
+                #     dfTooManyRequests.loc[len(dfTooManyRequests.index)] = [university, subLink]
+                # else:
+                #     logging.error('Data not retrieved because %s | URL: %s', error, subLink)
             except URLError as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 if isinstance(error.reason, socket.timeout):
                     logging.error('socket timed out - URL %s', subLink) 
                     logging.error('%s', error.strerror)
-                elif isinstance(error.reason, SSLCertVerificationError):
-                    dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
+                # elif isinstance(error.reason, SSLCertVerificationError):
+                #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
                 else:
                     logging.error('some other error happened: %s | %s', error.reason, subLink)
             except Exception as error:
@@ -105,11 +105,11 @@ pool = Pool(pool_size)
 path = './courseListings/'
 fileList = os.listdir(path)
 
-df404 = pd.DataFrame(columns=['name', 'link'])
-df403 = pd.DataFrame(columns=['name', 'link'])
-dfTooManyRequests = pd.DataFrame(columns=['name', 'link'])
-seriesTimeout = pd.DataFrame(columns=['name', 'link'])
-dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
+# df404 = pd.DataFrame(columns=['name', 'link'])
+# df403 = pd.DataFrame(columns=['name', 'link'])
+# dfTooManyRequests = pd.DataFrame(columns=['name', 'link'])
+# seriesTimeout = pd.DataFrame(columns=['name', 'link'])
+# dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
 
 dfGeneralErrorsList = []
 
@@ -119,10 +119,10 @@ import signal
 
 # START SAVE ON KILL SECTION
 def exit_handler():
-    df404.to_csv(storageLocation + '404Universities.csv', index = False)
-    df403.to_csv(storageLocation + '403Universities.csv', index = False)
-    dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-    dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+    # df404.to_csv(storageLocation + '404Universities.csv', index = False)
+    # df403.to_csv(storageLocation + '403Universities.csv', index = False)
+    # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+    # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
     dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
     dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
@@ -172,10 +172,10 @@ for university, process in processes:
     # Save progress every 25 iterations
     if(ct % 25 == 0):
         print("Saving progress.")
-        df404.to_csv(storageLocation + '404Universities.csv', index = False)
-        df403.to_csv(storageLocation + '403Universities.csv', index = False)
-        dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-        dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+        # df404.to_csv(storageLocation + '404Universities.csv', index = False)
+        # df403.to_csv(storageLocation + '403Universities.csv', index = False)
+        # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+        # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
         dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
@@ -188,10 +188,10 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 dfTimeout = dfAll[dfAll['name'].isin(allTimeoutFail)]
 dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
 
-df404.to_csv(storageLocation + '404Universities.csv', index = False)
-df403.to_csv(storageLocation + '403Universities.csv', index = False)
-dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+# df404.to_csv(storageLocation + '404Universities.csv', index = False)
+# df403.to_csv(storageLocation + '403Universities.csv', index = False)
+# dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+# dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
 dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
