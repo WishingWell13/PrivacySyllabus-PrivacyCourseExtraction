@@ -73,7 +73,7 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
+                dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": error.strerror})
                 if('HTTP Error 404' in str(error)):
                     df404.loc[len(df404.index)] = [university, subLink]
                 elif('HTTP Error 403' in str(error)):
@@ -83,7 +83,7 @@ def worker(university, file):
                 else:
                     logging.error('Data not retrieved because %s | URL: %s', error, subLink)
             except URLError as error:
-                dfGeneralErrors.loc[len(dfGeneralErrors.index)] = [university, subLink, error.strerror]
+                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 if isinstance(error.reason, socket.timeout):
                     logging.error('socket timed out - URL %s', subLink) 
                     logging.error('%s', error.strerror)
@@ -92,7 +92,7 @@ def worker(university, file):
                 else:
                     logging.error('some other error happened: %s | %s', error.reason, subLink)
             except Exception as error:
-                dfGeneralErrors.loc[len(dfGeneralErrors.index)] = [university, subLink, str(error)]
+                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 print("Error while reading and writing content from link - ", subLink)
                 continue
                 
@@ -111,7 +111,7 @@ dfTooManyRequests = pd.DataFrame(columns=['name', 'link'])
 seriesTimeout = pd.DataFrame(columns=['name', 'link'])
 dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
 
-dfGeneralErrors = pd.DataFrame(columns=['name', 'link', 'error'])
+dfGeneralErrorsList = []
 
 import sys
 import atexit
@@ -123,6 +123,8 @@ def exit_handler():
     df403.to_csv(storageLocation + '403Universities.csv', index = False)
     dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
     dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+    
+    dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
     dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 def kill_handler(*args):
@@ -159,10 +161,10 @@ for university, process in processes:
         print("TimeoutError : ", university)
         results.append(e)
         allTimeoutFail.append(university)
-        dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
+        dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": str(e)})
     except Exception as e:
         print("Exception %s: %s", university, e)
-        dfGeneralErrors._append({"name":university, "link": "Unknown Exception", "error": str(e)})
+        dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": str(e)})
         
     ct += 1
     print(str(ct) + " **************** University - " + university + "***********************")
@@ -175,6 +177,7 @@ for university, process in processes:
         dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
         dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
+        dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 print(results)
@@ -190,6 +193,7 @@ df403.to_csv(storageLocation + '403Universities.csv', index = False)
 dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
 dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
+dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList, columns=['name', 'link', 'error'])
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 # Close and join the pool
