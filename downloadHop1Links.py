@@ -125,7 +125,7 @@ def exit_handler():
     # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
     # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
-    dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList)
+    dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
     dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 def kill_handler(*args):
@@ -195,7 +195,7 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
 # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
-dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList)
+dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 # Close and join the pool
