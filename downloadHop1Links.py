@@ -73,7 +73,7 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": error.strerror})
+                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
                 # if('HTTP Error 404' in str(error)):
                 #     df404.loc[len(df404.index)] = [university, subLink]
                 # elif('HTTP Error 403' in str(error)):
@@ -83,7 +83,7 @@ def worker(university, file):
                 # else:
                 #     logging.error('Data not retrieved because %s | URL: %s', error, subLink)
             except URLError as error:
-                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
+                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
                 if isinstance(error.reason, socket.timeout):
                     logging.error('socket timed out - URL %s', subLink) 
                     logging.error('%s', error.strerror)
@@ -179,7 +179,7 @@ for university, process in processes:
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
         print("General Errors : ", dfGeneralErrorsList)
-        dfGeneralErrors = pd.DataFrame(dfGeneralErrorsList)
+        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 print(results)
@@ -187,8 +187,8 @@ print(results)
 print(str(ct) + " universities processed.")
 
 dfAll = pd.read_csv('all-university-classification-dataset.csv')
-dfTimeout = dfAll[dfAll['name'].isin(allTimeoutFail)]
-dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
+# dfTimeout = dfAll[dfAll['name'].isin(allTimeoutFail)]
+# dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
 
 # df404.to_csv(storageLocation + '404Universities.csv', index = False)
 # df403.to_csv(storageLocation + '403Universities.csv', index = False)
