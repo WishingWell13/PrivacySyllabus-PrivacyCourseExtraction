@@ -40,8 +40,13 @@ def worker(university, file):
     print("Starting University - " + university)
     os.mkdir("./courseListings/" + university)
     # Open and parse the main course listing page
-    html_page = open("./courseListings/" + file, "r")
-    soup = BeautifulSoup(html_page, "lxml")
+    try:
+        html_page = open("./courseListings/" + file, "r")
+        soup = BeautifulSoup(html_page, "lxml")
+    except Exception as e:
+        print("Error while reading main course listing page for university - ", university)
+        print(e)
+        
     
     
     # Iterate through all anchor tags (links) on the page
@@ -73,7 +78,8 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
+                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
+                continue
                 # if('HTTP Error 404' in str(error)):
                 #     df404.loc[len(df404.index)] = [university, subLink]
                 # elif('HTTP Error 403' in str(error)):
@@ -85,10 +91,11 @@ def worker(university, file):
             except URLError as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
                 if isinstance(error.reason, socket.timeout):
-                    logging.error('socket timed out - URL %s', subLink) 
-                    logging.error('%s', error.strerror)
+                    logging.error('socket timed out - URL %s | %s', subLink, error) 
+                    continue
                 else:
-                    logging.error('some other error happened: %s | %s', error.reason, subLink)
+                    logging.error('some other url error happened: %s | %s', error.reason, subLink)
+                    continue
                 # elif isinstance(error.reason, SSLCertVerificationError):
                 #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
                 
@@ -168,21 +175,19 @@ for university, process in processes:
         dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": str(e)})
         
     ct += 1
-    print(str(ct) + " **************** University - " + university + "***********************")
+    print(str(ct) + " / " + str(len(processes)) + " **************** University - " + university + "***********************")
     
     # Save progress every 25 iterations
-    if(ct % 25 == 0):
+    if(ct % 50 == 0):
         print("Saving progress.")
         # df404.to_csv(storageLocation + '404Universities.csv', index = False)
         # df403.to_csv(storageLocation + '403Universities.csv', index = False)
         # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
-        print("General Errors : ", dfGeneralErrorsList)
         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
-print(results)
 
 print(str(ct) + " universities processed.")
 
