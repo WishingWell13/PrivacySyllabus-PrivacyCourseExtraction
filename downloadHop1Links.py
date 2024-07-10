@@ -132,7 +132,7 @@ def exit_handler():
     # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
     # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
-    dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
+    dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
     dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 def kill_handler(*args):
@@ -178,14 +178,14 @@ for university, process in processes:
     print(str(ct) + " / " + str(len(processes)) + " **************** University - " + university + "***********************")
     
     # Save progress every 25 iterations
-    if(ct % 50 == 0):
+    if(ct % 25 == 0):
         print("Saving progress.")
         # df404.to_csv(storageLocation + '404Universities.csv', index = False)
         # df403.to_csv(storageLocation + '403Universities.csv', index = False)
         # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
-        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
+        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
         dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 
@@ -200,7 +200,7 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
 # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
-dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList))
+dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
 # Close and join the pool
