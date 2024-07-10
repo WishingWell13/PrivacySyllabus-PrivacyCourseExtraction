@@ -101,7 +101,7 @@ def worker(university, file):
                 
             except Exception as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
-                print("Error while reading and writing content from link - ", subLink)
+                print("Error while reading and writing content from link - %s | %s", subLink, error)
                 continue
                 
 
@@ -203,8 +203,13 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
 dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
 
+print("Final export successful")
+
 # Close and join the pool
 pool.close()
+
+print("All processes closed")
+
 pool.join()
 
 print("All processes closed and joined.")
