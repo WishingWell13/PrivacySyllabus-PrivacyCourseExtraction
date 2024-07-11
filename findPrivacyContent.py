@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import re
 
+# test - ameya - if sync
 # Path to the directory containing HTML files of course listings
 path = './courseListings/'
 
