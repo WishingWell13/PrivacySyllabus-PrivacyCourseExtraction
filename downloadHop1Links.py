@@ -1,5 +1,7 @@
 import logging
+import random
 from ssl import SSLCertVerificationError
+from time import sleep
 from bs4 import BeautifulSoup
 import json
 from urllib.parse import urlparse
@@ -11,6 +13,8 @@ import shutil
 from multiprocessing.pool import ThreadPool as Pool
 from multiprocessing import TimeoutError
 import pandas as pd
+from datetime import time
+
 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
@@ -46,8 +50,6 @@ def worker(university, file):
     except Exception as e:
         print("Error while reading main course listing page for university - ", university)
         print(e)
-        
-    
     
     # Iterate through all anchor tags (links) on the page
     for i, link in enumerate(soup.findAll('a')):
@@ -133,7 +135,7 @@ def exit_handler():
     # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
     dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-    dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
+    dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
 
 def kill_handler(*args):
     sys.exit(0)
@@ -157,6 +159,7 @@ for file in fileList:
         shutil.rmtree("./courseListings/" + university)
     # Add the process to the pool
     processes.append((university, pool.apply_async(worker, (university, file, ))))
+    sleep(random.random + 0.1)
     
 
 ct = 0
@@ -186,7 +189,7 @@ for university, process in processes:
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-        dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
+        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
 
 
 print(str(ct) + " universities processed.")
@@ -205,11 +208,17 @@ pool.close()
 
 print("All processes closed")
 
+for thread in pool.enumerate(): 
+    print(thread.name)
+
 pool.join()
 
 print("All processes closed and joined.")
 
+for thread in pool.enumerate(): 
+    print(thread.name)
+
 dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
+dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
 
 print("Final export successful")
