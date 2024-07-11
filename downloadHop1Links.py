@@ -200,11 +200,6 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
 # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
-dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
-
-print("Final export successful")
-
 # Close and join the pool
 pool.close()
 
@@ -213,3 +208,8 @@ print("All processes closed")
 pool.join()
 
 print("All processes closed and joined.")
+
+dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
+dfGeneralErrors.to_csv(storageLocation + 'generalErrorUniversities.csv', index = False)
+
+print("Final export successful")
