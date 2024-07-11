@@ -55,7 +55,7 @@ This script:
 - Downloads the content of each link and saves it to the respective university directory under `courseListings/
 
 Expectred Output:
-- A series of folders, each named after their university
+- A series of folders, each namesd after their university
 
 May need to `pip install lxml`
 

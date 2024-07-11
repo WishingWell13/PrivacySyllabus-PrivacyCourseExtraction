@@ -1,7 +1,5 @@
 import logging
-import random
 from ssl import SSLCertVerificationError
-from time import sleep
 from bs4 import BeautifulSoup
 import json
 from urllib.parse import urlparse
@@ -13,11 +11,6 @@ import shutil
 from multiprocessing.pool import ThreadPool as Pool
 from multiprocessing import TimeoutError
 import pandas as pd
-from datetime import datetime, time
-
-
-now = datetime.now()
-startTime = now.strftime("%Y%m%d%X")
 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
@@ -47,12 +40,9 @@ def worker(university, file):
     print("Starting University - " + university)
     os.mkdir("./courseListings/" + university)
     # Open and parse the main course listing page
-    try:
-        html_page = open("./courseListings/" + file, "r")
-        soup = BeautifulSoup(html_page, "lxml")
-    except Exception as e:
-        print("Error while reading main course listing page for university - ", university)
-        print(e)
+    html_page = open("./courseListings/" + file, "r")
+    soup = BeautifulSoup(html_page, "lxml")
+    
     
     # Iterate through all anchor tags (links) on the page
     for i, link in enumerate(soup.findAll('a')):
@@ -83,30 +73,24 @@ def worker(university, file):
                 f.close()
                 # print("Successfully read and wrote content from link - ", subLink)
             except HTTPError as error:
-                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
-                continue
-                # if('HTTP Error 404' in str(error)):
-                #     df404.loc[len(df404.index)] = [university, subLink]
-                # elif('HTTP Error 403' in str(error)):
-                #     df403.loc[len(df403.index)] = [university, subLink]
-                # elif('HTTP Error 429'  in str(error)):
-                #     dfTooManyRequests.loc[len(dfTooManyRequests.index)] = [university, subLink]
-                # else:
-                #     logging.error('Data not retrieved because %s | URL: %s', error, subLink)
-            except URLError as error:
-                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
-                if isinstance(error.reason, socket.timeout):
-                    logging.error('socket timed out - URL %s | %s', subLink, error) 
-                    continue
+                if('HTTP Error 404' in str(error)):
+                    df404.loc[len(df404.index)] = [university, subLink]
+                elif('HTTP Error 403' in str(error)):
+                    df403.loc[len(df403.index)] = [university, subLink]
+                elif('HTTP Error 429'  in str(error)):
+                    dfTooManyRequests.loc[len(dfTooManyRequests.index)] = [university, subLink]
                 else:
-                    logging.error('some other url error happened: %s | %s', error.reason, subLink)
-                    continue
-                # elif isinstance(error.reason, SSLCertVerificationError):
-                #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
-                
-            except Exception as error:
-                dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
-                print("Error while reading and writing content from link - %s | %s", subLink, error)
+                    logging.error('Data not retrieved because %s | URL: %s', error, subLink)
+            except URLError as error:
+                if isinstance(error.reason, socket.timeout):
+                    logging.error('socket timed out - URL %s', subLink) 
+                    logging.error('%s', error.strerror)
+                elif isinstance(error.reason, SSLCertVerificationError):
+                    dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
+                else:
+                    logging.error('some other error happened: %s | %s', error.reason, subLink)
+            except Exception:
+                print("Error while reading and writing content from link - ", subLink)
                 continue
                 
 
@@ -118,39 +102,11 @@ pool = Pool(pool_size)
 path = './courseListings/'
 fileList = os.listdir(path)
 
-# df404 = pd.DataFrame(columns=['name', 'link'])
-# df403 = pd.DataFrame(columns=['name', 'link'])
-# dfTooManyRequests = pd.DataFrame(columns=['name', 'link'])
-# seriesTimeout = pd.DataFrame(columns=['name', 'link'])
-# dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
-
-dfGeneralErrorsList = []
-ct = 0
-
-import sys
-import atexit
-import signal
-
-# START SAVE ON KILL SECTION
-def exit_handler():
-    # df404.to_csv(storageLocation + '404Universities.csv', index = False)
-    # df403.to_csv(storageLocation + '403Universities.csv', index = False)
-    # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-    # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
-    
-    if(ct>5):
-        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
-
-def kill_handler(*args):
-    sys.exit(0)
-        
-
-atexit.register(exit_handler)
-signal.signal(signal.SIGINT, kill_handler)
-signal.signal(signal.SIGTERM, kill_handler)
-# END SAVE ON KILL SECTION    
-
+df404 = pd.DataFrame(columns=['name', 'link'])
+df403 = pd.DataFrame(columns=['name', 'link'])
+dfTooManyRequests = pd.DataFrame(columns=['name', 'link'])
+seriesTimeout = pd.DataFrame(columns=['name', 'link'])
+dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
 processes = []
 results = []
 # Iterate through each file in the directory
@@ -165,9 +121,9 @@ for file in fileList:
         shutil.rmtree("./courseListings/" + university)
     # Add the process to the pool
     processes.append((university, pool.apply_async(worker, (university, file, ))))
-    sleep(random.random() + 0.1)
     
 
+ct = 0
 allTimeoutFail = []
 # Retrieve and print results for each university process
 for university, process in processes:
@@ -177,50 +133,53 @@ for university, process in processes:
         print("TimeoutError : ", university)
         results.append(e)
         allTimeoutFail.append(university)
-        dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": str(e)})
     except Exception as e:
         print("Exception %s: %s", university, e)
-        dfGeneralErrorsList.append({"name":university, "link": "Unknown Exception", "error": str(e)})
         
     ct += 1
-    print(str(ct) + " / " + str(len(processes)) + " **************** University - " + university + "***********************")
+    print(str(ct) + " **************** University - " + university + "***********************")
     
     # Save progress every 25 iterations
     if(ct % 25 == 0):
         print("Saving progress.")
-        # df404.to_csv(storageLocation + '404Universities.csv', index = False)
-        # df403.to_csv(storageLocation + '403Universities.csv', index = False)
-        # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-        # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
-        
-        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+        df404.to_csv(storageLocation + '404Universities.csv', index = False)
+        df403.to_csv(storageLocation + '403Universities.csv', index = False)
+        dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+        dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
+print(results)
 
 print(str(ct) + " universities processed.")
 
 dfAll = pd.read_csv('all-university-classification-dataset.csv')
-# dfTimeout = dfAll[dfAll['name'].isin(allTimeoutFail)]
-# dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
+dfTimeout = dfAll[dfAll['name'].isin(allTimeoutFail)]
+dfTimeout.to_csv(storageLocation + 'TimeoutUniversities.csv', index = False)
 
-# df404.to_csv(storageLocation + '404Universities.csv', index = False)
-# df403.to_csv(storageLocation + '403Universities.csv', index = False)
-# dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
-# dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+df404.to_csv(storageLocation + '404Universities.csv', index = False)
+df403.to_csv(storageLocation + '403Universities.csv', index = False)
+dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
 
 # Close and join the pool
 pool.close()
-
-print("All processes closed")
-
-for thread in pool.enumerate(): 
-    print(thread.name)
-
 pool.join()
 
-print("All processes closed and joined.")
 
-dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+import sys
+import atexit
+import signal
 
-print("Final export successful")
+# START SAVE ON KILL SECTION
+def exit_handler():
+    df404.to_csv(storageLocation + '404Universities.csv', index = False)
+df403.to_csv(storageLocation + '403Universities.csv', index = False)
+dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
+dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
+
+def kill_handler(*args):
+    sys.exit(0)
+
+atexit.register(exit_handler)
+signal.signal(signal.SIGINT, kill_handler)
+signal.signal(signal.SIGTERM, kill_handler)
+# END SAVE ON KILL SECTION    
