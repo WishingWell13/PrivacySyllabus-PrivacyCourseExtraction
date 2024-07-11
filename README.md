@@ -53,6 +53,7 @@ This script:
 - Reads the main course listing HTML files.
 - Extracts all links from each main page.
 - Downloads the content of each link and saves it to the respective university directory under `courseListings/
+
 Expectred Output:
 - A series of folders, each namesd after their university
 
