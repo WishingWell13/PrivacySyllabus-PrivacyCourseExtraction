@@ -13,8 +13,11 @@ import shutil
 from multiprocessing.pool import ThreadPool as Pool
 from multiprocessing import TimeoutError
 import pandas as pd
-from datetime import time
+from datetime import datetime, time
 
+
+now = datetime.now()
+startTime = now.strftime("%Y%m%d%S")
 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
@@ -135,7 +138,7 @@ def exit_handler():
     # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
     dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-    dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
+    dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
 def kill_handler(*args):
     sys.exit(0)
@@ -159,7 +162,7 @@ for file in fileList:
         shutil.rmtree("./courseListings/" + university)
     # Add the process to the pool
     processes.append((university, pool.apply_async(worker, (university, file, ))))
-    sleep(random.random + 0.1)
+    sleep(random.random() + 0.1)
     
 
 ct = 0
@@ -189,7 +192,7 @@ for university, process in processes:
         # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
         
         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
+        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
 
 print(str(ct) + " universities processed.")
@@ -219,6 +222,6 @@ for thread in pool.enumerate():
     print(thread.name)
 
 dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{time.strftime("%Y%m%d%S")}.csv', index = False)
+dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
 print("Final export successful")
