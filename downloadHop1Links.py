@@ -17,7 +17,7 @@ from datetime import datetime, time
 
 
 now = datetime.now()
-startTime = now.strftime("%Y%m%d%S")
+startTime = now.strftime("%Y%m%d%X")
 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
@@ -125,6 +125,7 @@ fileList = os.listdir(path)
 # dfBadCertificate = pd.DataFrame(columns=['name', 'link'])
 
 dfGeneralErrorsList = []
+ct = 0
 
 import sys
 import atexit
@@ -137,11 +138,13 @@ def exit_handler():
     # dfTooManyRequests.to_csv(storageLocation + 'tooManyRequestUniversities.csv', index = False)
     # dfBadCertificate.to_csv(storageLocation + 'badCertificateUniversities.csv', index = False)
     
-    dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-    dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+    if(ct>5):
+        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
+        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
 def kill_handler(*args):
     sys.exit(0)
+        
 
 atexit.register(exit_handler)
 signal.signal(signal.SIGINT, kill_handler)
@@ -165,7 +168,6 @@ for file in fileList:
     sleep(random.random() + 0.1)
     
 
-ct = 0
 allTimeoutFail = []
 # Retrieve and print results for each university process
 for university, process in processes:
@@ -217,9 +219,6 @@ for thread in pool.enumerate():
 pool.join()
 
 print("All processes closed and joined.")
-
-for thread in pool.enumerate(): 
-    print(thread.name)
 
 dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
 dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
