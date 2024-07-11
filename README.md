@@ -54,7 +54,9 @@ This script:
 - Extracts all links from each main page.
 - Downloads the content of each link and saves it to the respective university directory under `courseListings/
 Expectred Output:
-- A series of folders, each namesdd 
+- A series of folders, each namesd after their university
+
+May need to `pip install lxml`
 
 **Step 3**: Find Privacy-Related Content
 Run findPrivacyContent.py to analyze the downloaded HTML pages for privacy-related content and save the results to CSV files.
