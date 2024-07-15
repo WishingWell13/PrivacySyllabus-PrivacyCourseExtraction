@@ -42,7 +42,7 @@ def worker(university, file):
     """
     Worker function to process each university.
     Reads the main course listing page and extracts all links.
-    Downloads the contexnt of each link and saves it as an HTML file.
+    Downloads the content of each link and saves it as an HTML file.
     """
     print("Starting University - " + university)
     os.mkdir("./courseListings/" + university)
@@ -192,9 +192,6 @@ dfAll = pd.read_csv('all-university-classification-dataset.csv')
 pool.close()
 
 print("All processes closed")
-
-for thread in pool.enumerate(): 
-    print(thread.name)
 
 pool.join()
 
