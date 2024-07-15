@@ -21,7 +21,7 @@ This repository contains scripts to extract privacy-related content from univers
 ## Setup
 
 1. **Install required Python packages:**
-   `pip install selenium beautifulsoup4 pandas requests webdriver-manager chromedriver-autoinstaller`
+   `pip install selenium beautifulsoup4 pandas requests webdriver-manager chromedriver-autoinstaller lxml`
 
 2. Ensure ChromeDriver is installed and compatible with your version of Chrome.
 The scripts use chromedriver-autoinstaller to handle this automatically.
@@ -44,7 +44,7 @@ This script:
 Expected output: 
 - A series of HTML files, each named after the college's webpage.
 
-**Universities in `universityLinkMapping.json` will be skipped. Delete the file for a fresh run.**
+**Universities in `universityLinkMapping.json` will be skipped.** Delete the file for a fresh run.
 
 **Step 2**: Download Linked Pages
 Run downloadHop1Links.py to download all linked pages from the main course listing pages saved in Step 1.
