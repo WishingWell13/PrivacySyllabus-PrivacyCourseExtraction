@@ -64,8 +64,8 @@ except FileNotFoundError:
 	pass
 
 try:
-	# universityList = pd.read_csv('all-university-classification-dataset.csv')['name'].to_list()
-    universityList = pd.read_csv('ErrorUniversities.csv')['name'].to_list()
+	universityList = pd.read_csv('all-university-classification-dataset.csv')['name'].to_list()
+    # universityList = pd.read_csv('ErrorUniversities.csv')['name'].to_list()
 except:
 	print("No all university list found.")
 	pass
