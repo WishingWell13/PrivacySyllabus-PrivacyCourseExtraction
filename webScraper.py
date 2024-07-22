@@ -44,7 +44,7 @@ signal.signal(signal.SIGTERM, kill_handler)
 
 
 # Path to chromedriver
-path = "/Users/aishwaryamanjunath/Downloads/chromedriver-mac-x64/chromedriver.exe"
+path = r"C:\Users\girma\chromedriver-win64\chromedriver-win64\chromedriver.exe"
 
 # Automatically install chromedriver
 chromedriver_autoinstaller.install()
