@@ -13,12 +13,12 @@ import shutil
 from multiprocessing.pool import ThreadPool as Pool
 from multiprocessing import TimeoutError
 import pandas as pd
-from datetime import datetime, time
-
+from datetime import datetime
+import time
 
 now = datetime.now()
 startTime = now.strftime("%Y-%m-%d-%I")
-
+load_time_results = [] 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
 
@@ -74,14 +74,30 @@ def worker(university, file):
                     subLink = baseUrl + "/" + subLink
 
             try:
+                # Start timing to measure load time of each sublink (by Girma)
+                start_time = time.time()
                 # Open the sublink and read its content
                 response = urllib.request.urlopen(subLink)
                 webContent = response.read().decode('UTF-8')
+                
+                # End timing (by Girma)
+                end_time = time.time()
+                # Calculate load time
+                load_time = end_time - start_time
+                
                 # Write the content to a new HTML file
                 f = open("./courseListings/" + university + "/" + str(i) + '.html', 'w')
                 f.write(webContent)
                 f.close()
+                print(f"Sublink for {university} loaded in {load_time:.2f} seconds")
+                # logging.info(f"Sublink for {university} loaded in {load_time:.2f} seconds")
                 # print("Successfully read and wrote content from link - ", subLink)
+                # Append result to the list
+                load_time_results.append({
+                    "name": university,
+                    "link": subLink,
+                    "time": load_time
+                })
             except HTTPError as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 continue
@@ -108,7 +124,6 @@ def worker(university, file):
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
                 print("Error while reading and writing content from link", subLink, error)
                 continue
-                
 
 # Number of parallel threads
 pool_size = 100  # your "parallelness"
@@ -118,32 +133,45 @@ pool = Pool(pool_size)
 path = './courseListings/'
 fileList = os.listdir(path)
 print("Number of universities to process: ", len(fileList))
-print("First 10 universities: ", fileList[:10])
+print("First 5 universities: ", fileList[:5])
 
 dfGeneralErrorsList = []
 ct = 0
+
 
 import sys
 import atexit
 import signal
 
 # START SAVE ON KILL SECTION
-def exit_handler():
-    if(ct>5):
-        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
-
-def kill_handler(*args):
-    sys.exit(0)
+# def exit_handler():
+#     print("Exit Handler")
+#     if(ct>5):
+#         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
+#         os.makedirs(storageLocation, exist_ok=True)
         
+#         # Create a DataFrame from the results
+#         df_load_times = pd.DataFrame(load_time_results)
+#         # Ensure the directory exists
+#         os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
+#         # Save the DataFrame to a CSV file
+#         csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+#         df_load_times.to_csv(csv_filename, index=False)
 
-atexit.register(exit_handler)
-signal.signal(signal.SIGINT, kill_handler)
-signal.signal(signal.SIGTERM, kill_handler)
+#         dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+
+# def kill_handler(*args):
+#     print("Kill Handler")
+#     sys.exit(0)
+
+# atexit.register(exit_handler)
+# signal.signal(signal.SIGINT, kill_handler)
+# signal.signal(signal.SIGTERM, kill_handler)
 # END SAVE ON KILL SECTION    
 
 processes = []
 results = []
+
 # Iterate through each file in the directory
 for file in fileList:
     if(".html" not in file):
@@ -163,7 +191,7 @@ allTimeoutFail = []
 # Retrieve and print results for each university process
 for university, process in processes:
     try:
-        results.append(process.get(timeout = 60))
+        results.append(process.get(timeout = 300))
     except TimeoutError as e:
         print("TimeoutError : ", university)
         results.append(e)
@@ -178,6 +206,15 @@ for university, process in processes:
     
     # Save progress every 25 iterations
     if(ct % 25 == 0):
+                
+        # Create a DataFrame from the results
+        df_load_times = pd.DataFrame(load_time_results)
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
+        # Save the DataFrame to a CSV file
+        csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+        df_load_times.to_csv(csv_filename, index=False)
+
         print("Saving progress.")
         
         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
@@ -197,7 +234,25 @@ pool.join()
 
 print("All processes closed and joined.")
 
+# Create a DataFrame from the results
+df_load_times = pd.DataFrame(load_time_results)
+# Ensure the directory exists
+os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
+# Save the DataFrame to a CSV file
+csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+df_load_times.to_csv(csv_filename, index=False)
+
+print(f"Load times have been saved to {csv_filename}")
+
 dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
 dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
 print("Final export successful")
+
+
+
+def saveItems(generalErrorList = [], timeoutList = []):
+    if generalErrorList != []:
+        dfGeneralErrors = pd.DataFrame(pd.Series(generalErrorList).tolist())
+        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+    pass

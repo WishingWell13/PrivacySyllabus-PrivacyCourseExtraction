@@ -26,6 +26,8 @@ This repository contains scripts to extract privacy-related content from univers
 2. Ensure ChromeDriver is installed and compatible with your version of Chrome.
 The scripts use chromedriver-autoinstaller to handle this automatically.
 
+**Note:**- Make sure to update the chromedriver path variable in the ```webScraper.py``` script to the path of your own local ChromeDriver executable. The path should include the full extension ```.... .exe```.
+
 3. Directory Structure:
 Ensure the courseListings/ directory exists in the root of your repository. This is where HTML files will be saved and read from.
 

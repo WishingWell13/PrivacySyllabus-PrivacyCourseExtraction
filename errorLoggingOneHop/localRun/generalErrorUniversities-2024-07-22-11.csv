@@ -1,0 +1,105 @@
+name,link,error
+Colorado State University-Fort Collins,https://www.colostate.edu,HTTP Error 403: Forbidden
+Kansas State University,https://connect.k-state.edu,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1133)
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/BMAC/,'charmap' codec can't encode character '\u0301' in position 19345: character maps to <undefined>
+Colorado State University-Fort Collins,https://compsci.colostate.edu/building-directory/,HTTP Error 403: Forbidden
+Cornell University,https://www.cs.cornell.edu/information/awards-by-recipient,'charmap' codec can't encode character '\u200b' in position 239397: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/information/awards-by-category,'charmap' codec can't encode character '\u200b' in position 97298: character maps to <undefined>
+Kansas State University,https://webmail.k-state.edu,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1133)
+Kansas State University,https://connect.k-state.edu,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1133)
+Kansas State University,https://www.k-state.edu/directories/,'charmap' codec can't encode character '\u200b' in position 5823: character maps to <undefined>
+Cornell University,https://ecommons.cornell.edu/bitstream/handle/1813/44201/CS_Oral_History_Directory_v10Jun16.pdf?sequence=2&isAllowed=y,'charmap' codec can't encode character '\u010c' in position 65866: character maps to <undefined>
+Cornell University,https://cornell.box.com/s/ondnqm77d73qhqv7zj6us9prucq0ueli,'charmap' codec can't encode characters in position 10276-10282: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/about/history/2022-2023%20CS%20Fact%20Sheet.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Kansas State University,https://giving.ksufoundation.org/campaigns/17112/donations/new,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://admissions.colostate.edu/,'charmap' codec can't encode characters in position 57882-57883: character maps to <undefined>
+Colorado State University-Fort Collins,https://amplify.colostate.edu/,'charmap' codec can't encode characters in position 85679-85682: character maps to <undefined>
+Kansas State University,https://caids.cs.ksu.edu/,'utf-8' codec can't decode byte 0xfc in position 10514: invalid start byte
+Kansas State University,https://alt.cs.ksu.edu/,'charmap' codec can't encode character '\U0001f852' in position 5367: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/cyber-pipeline/curriculum/,'charmap' codec can't encode character '\uf0b7' in position 34364: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/cyber-pipeline/teacher_support/,'charmap' codec can't encode character '\uf0b7' in position 36085: character maps to <undefined>
+Cornell University,https://www.hr.cornell.edu/jobs/positions.html,HTTP Error 404: Not Found
+Kansas State University,https://www.cs.ksu.edu/about/history/2022-2023%20CS%20Fact%20Sheet.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Colorado State University-Fort Collins,https://graduateschool.colostate.edu/commencement/,HTTP Error 403: Forbidden
+Kansas State University,https://giving.ksufoundation.org/campaigns/17112/donations/new,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://compsci.colostate.edu/building-directory/,HTTP Error 403: Forbidden
+Kansas State University,https://www.cs.ksu.edu/academics/undergraduate/cybersecurity/index.html,'charmap' codec can't encode character '\u2002' in position 38978: character maps to <undefined>
+Cornell University,https://www.bigredhacks.com/,HTTP Error 403: Forbidden
+Cornell University,https://diversity.cis.cornell.edu/programs/csmore/,'charmap' codec can't encode character '\u0331' in position 65554: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/BMAC/,'charmap' codec can't encode character '\u0301' in position 19345: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/juniortheorists/,'charmap' codec can't encode character '\ufb00' in position 8303: character maps to <undefined>
+Colorado State University-Fort Collins,https://compsci.colostate.edu/building-directory/,HTTP Error 403: Forbidden
+Cornell University,https://www.cs.cornell.edu/people/chair,'charmap' codec can't encode character '\u25b8' in position 32051: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/student-success/advising/cs-prereq-waiver/CS%20Prerequisite_Waiver_Form-Updated%20April%202024.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Kansas State University,https://engg.k-state.edu/academics/undergraduate/degree-maps/,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1133)
+Colorado State University-Fort Collins,https://admissions.colostate.edu/,'charmap' codec can't encode characters in position 57882-57883: character maps to <undefined>
+Colorado State University-Fort Collins,https://amplify.colostate.edu/,'charmap' codec can't encode characters in position 85679-85682: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/courseinfo/enrollment,'charmap' codec can't encode character '\u200b' in position 37353: character maps to <undefined>
+Colorado State University-Fort Collins,https://graduateschool.colostate.edu/commencement/,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://compsci.colostate.edu/building-directory/,HTTP Error 403: Forbidden
+Kansas State University,https://ksucdc.org,"[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+Kansas State University,https://gdc.cs.ksu.edu/,'charmap' codec can't encode characters in position 4579-4593: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/research/theory,'charmap' codec can't encode character '\u200b' in position 36208: character maps to <undefined>
+Kansas State University,https://caids.cs.ksu.edu/,'utf-8' codec can't decode byte 0xfc in position 10514: invalid start byte
+Kansas State University,https://alt.cs.ksu.edu/,'charmap' codec can't encode character '\U0001f852' in position 5367: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/cyber-pipeline/curriculum/,'charmap' codec can't encode character '\uf0b7' in position 34364: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/cyber-pipeline/teacher_support/,'charmap' codec can't encode character '\uf0b7' in position 36085: character maps to <undefined>
+Colorado State University-Fort Collins,https://compsci.colostate.edu/wp-content/uploads/sites/17/2024/04/cs-prereq-flowchart-nov2023.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Colorado State University-Fort Collins,https://compsci.colostate.edu/wp-content/uploads/sites/17/2024/04/cs-prereq-flowchart-nov2023.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Colorado State University-Fort Collins,https://compsci.colostate.edu//compare-courses/,'charmap' codec can't encode character '\u202f' in position 72867: character maps to <undefined>
+Colorado State University-Fort Collins,https://compsci.colostate.edu//compare-courses/,'charmap' codec can't encode character '\u202f' in position 72867: character maps to <undefined>
+Kansas State University,https://www.engg.ksu.edu,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1133)
+Kansas State University,https://courses.k-state.edu/spring2024/CIS/,'charmap' codec can't encode character '\u200a' in position 28186: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2023/CIS/,'charmap' codec can't encode character '\u2009' in position 15269: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2023/CIS/,'charmap' codec can't encode character '\u200a' in position 22833: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2022/CIS/,'charmap' codec can't encode character '\u2009' in position 26704: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs152/#/,'charmap' codec can't encode character '\u2033' in position 153: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2022/CIS/,'charmap' codec can't encode character '\u200a' in position 26440: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2021/CIS/,'charmap' codec can't encode character '\u2009' in position 23090: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/summer2021/CIS/,'charmap' codec can't encode character '\u2009' in position 27922: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs165/,'charmap' codec can't encode character '\u2033' in position 105: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2021/CIS/,'charmap' codec can't encode character '\u2009' in position 30927: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2020/CIS/,'charmap' codec can't encode character '\u2009' in position 23207: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs214,'charmap' codec can't encode character '\u2033' in position 105: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2020/CIS/,'charmap' codec can't encode character '\u2009' in position 16169: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/undergrad/csmajor/becoming-cs-major,'charmap' codec can't encode character '\u200b' in position 32958: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2019/CIS/,'charmap' codec can't encode character '\u2009' in position 14370: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/summer2019/CIS/,'charmap' codec can't encode character '\u2009' in position 17707: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2019/CIS/,'charmap' codec can't encode character '\u2009' in position 13235: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/summer2018/CIS/,'charmap' codec can't encode character '\u2009' in position 18123: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs310h/#/,'charmap' codec can't encode character '\u2033' in position 186: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/fall2018/CIS/,'charmap' codec can't encode character '\u2009' in position 13126: character maps to <undefined>
+Kansas State University,https://courses.k-state.edu/spring2018/CIS/,'charmap' codec can't encode character '\u2009' in position 13034: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/undergrad/rulesandproceduresarts/artschecklist,'charmap' codec can't encode character '\u200b' in position 34556: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs314/,'charmap' codec can't encode character '\u2033' in position 121: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/academics/undergraduate/cybersecurity/index.html,'charmap' codec can't encode character '\u2002' in position 38978: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs414/,'charmap' codec can't encode character '\u2033' in position 123: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs415,'charmap' codec can't encode character '\u2033' in position 106: character maps to <undefined>
+Kansas State University,https://www.youtube.com/channel/UCQ2Gez99Tf4sMOAZs6AZ2MQ,'charmap' codec can't encode character '\u2190' in position 570165: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/masters/apply/earlyadmission,'charmap' codec can't encode character '\u200b' in position 31321: character maps to <undefined>
+Kansas State University,https://www.cs.ksu.edu/tel:+17855326350,HTTP Error 404: Not Found
+Kansas State University,https://www.cs.ksu.edu/mailto:csoffice@k-state.edu,HTTP Error 404: Not Found
+Cornell University,https://www.cs.cornell.edu/masters/apply/application,'charmap' codec can't encode character '\u200b' in position 34038: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs535/,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://cs.colostate.edu/~cs542/,'charmap' codec can't encode character '\u2033' in position 121: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/masters/academics/preapprovedcourses,'charmap' codec can't encode character '\u200b' in position 41828: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/masters/current/courseenrollment,'charmap' codec can't encode character '\u200b' in position 32614: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/BMAC/,'charmap' codec can't encode character '\u0301' in position 19345: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs253/,'charmap' codec can't encode character '\u2012' in position 18230: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.cs.colostate.edu/~cs270/,'charmap' codec can't encode character '\u2630' in position 2313: character maps to <undefined>
+Colorado State University-Fort Collins,https://goo.gl/maps/VjuTjLoaXdVacEL39,'charmap' codec can't encode characters in position 1256-1260: character maps to <undefined>
+Colorado State University-Fort Collins,https://compsci.colostate.edu/tel:+19704916512,HTTP Error 404: Not Found
+Colorado State University-Fort Collins,https://compsci.colostate.edu/tel:+19704912466,HTTP Error 404: Not Found
+Colorado State University-Fort Collins,https://compsci.colostate.edu/mailto:compsci_info@colostate.edu,HTTP Error 404: Not Found
+Cornell University,https://www.cs.cornell.edu/sites/default/files/shared/graduate_ta_handbook.pdf,'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+Colorado State University-Fort Collins,https://www.youtube.com/channel/UCVLw7iPx53hlerUv_7hBEoA,'charmap' codec can't encode character '\u2190' in position 518743: character maps to <undefined>
+Cornell University,https://www.cs.cornell.edu/sites/default/files/shared/ms_checklist.pdf,'utf-8' codec can't decode byte 0xe2 in position 10: invalid continuation byte
+Colorado State University-Fort Collins,https://www.biology.colostate.edu/,'charmap' codec can't encode characters in position 115672-115673: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.chem.colostate.edu/,'charmap' codec can't encode character '\u202f' in position 123336: character maps to <undefined>
+Colorado State University-Fort Collins,https://advancing.colostate.edu/CNS/GIVE,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://admissions.colostate.edu,'charmap' codec can't encode characters in position 57882-57883: character maps to <undefined>
+Colorado State University-Fort Collins,https://www.colostate.edu/info-contact.aspx,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://www.colostate.edu/info-disclaimer.aspx,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://www.colostate.edu/info-equalop.aspx,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://www.colostate.edu/info-privacy.aspx,HTTP Error 403: Forbidden
+Colorado State University-Fort Collins,https://www.colostate.edu/,HTTP Error 403: Forbidden
