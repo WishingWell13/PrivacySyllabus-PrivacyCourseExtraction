@@ -144,29 +144,29 @@ import atexit
 import signal
 
 # START SAVE ON KILL SECTION
-# def exit_handler():
-#     print("Exit Handler")
-#     if(ct>5):
-#         dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
-#         os.makedirs(storageLocation, exist_ok=True)
+def exit_handler():
+    print("Exit Handler")
+    if(ct>5):
+        dfGeneralErrors = pd.DataFrame(pd.Series(dfGeneralErrorsList).tolist())
+        os.makedirs(storageLocation, exist_ok=True)
         
-#         # Create a DataFrame from the results
-#         df_load_times = pd.DataFrame(load_time_results)
-#         # Ensure the directory exists
-#         os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
-#         # Save the DataFrame to a CSV file
-#         csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
-#         df_load_times.to_csv(csv_filename, index=False)
+        # Create a DataFrame from the results
+        df_load_times = pd.DataFrame(load_time_results)
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
+        # Save the DataFrame to a CSV file
+        csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+        df_load_times.to_csv(csv_filename, index=False)
 
-#         dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
+        dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
 
-# def kill_handler(*args):
-#     print("Kill Handler")
-#     sys.exit(0)
+def kill_handler(*args):
+    print("Kill Handler")
+    sys.exit(0)
 
-# atexit.register(exit_handler)
-# signal.signal(signal.SIGINT, kill_handler)
-# signal.signal(signal.SIGTERM, kill_handler)
+atexit.register(exit_handler)
+signal.signal(signal.SIGINT, kill_handler)
+signal.signal(signal.SIGTERM, kill_handler)
 # END SAVE ON KILL SECTION    
 
 processes = []
