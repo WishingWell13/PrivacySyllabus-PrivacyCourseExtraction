@@ -17,7 +17,7 @@ from datetime import datetime, time
 
 
 now = datetime.now()
-startTime = now.strftime("%Y%m%d-%X")
+startTime = now.strftime("%Y-%m-%d-%I")
 
 # List of universities to process
 universityList = ['College Unbound', 'Salisbury University', 'Universal Technical Institute-Dallas Fort Worth', 'Texas Wesleyan University']
@@ -96,17 +96,17 @@ def worker(university, file):
             except URLError as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": error.reason})
                 if isinstance(error.reason, socket.timeout):
-                    logging.error('socket timed out - URL %s | %s', subLink, error) 
+                    logging.error(f'socket timed out - URL {subLink} | {error}') 
                     continue
+                elif isinstance(error.reason, SSLCertVerificationError):
+                    # dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
+                    logging.error(f'SSL Certificate Error - URL {subLink}, {error.reason.strerror}')
                 else:
-                    logging.error('some other url error happened: %s | %s', error.reason, subLink)
+                    logging.error(f'some other url error happened: {str(subLink)} | {str(error)} ' )
                     continue
-                # elif isinstance(error.reason, SSLCertVerificationError):
-                #     dfBadCertificate.loc[len(dfBadCertificate.index)] = [university, subLink]
-                
             except Exception as error:
                 dfGeneralErrorsList.append({"name": university, "link": subLink, "error": str(error)})
-                print("Error while reading and writing content from link - %s | %s", subLink, error)
+                print("Error while reading and writing content from link", subLink, error)
                 continue
                 
 
