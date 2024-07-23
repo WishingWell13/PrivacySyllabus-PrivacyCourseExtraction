@@ -1,0 +1,460 @@
+error,frequency (percentage)
+GROUPED URL can't contain control characters,16.618136439267886
+HTTP Error 404: Not Found,15.443012
+HTTP Error 403: Forbidden,15.141431
+GROUPED 'utf-8' codec can't decode byte,15.016638935108153
+HTTP Error 999: Request denied,10.700915
+HTTP Error 429: Too Many Requests,3.161398
+"[Errno 8] nodename nor servname provided, or not known",3.1198
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129),2.558236
+HTTP Error 400: Bad Request,2.111065
+[Errno 60] Operation timed out,1.497504
+HTTP Error 401: Unauthorized,0.686356
+HTTP Error 417: ,0.675957
+HTTP Error 406: Not Acceptable,0.655158
+HTTP Error 500: Internal Server Error,0.540765
+HTTP Error 503: Service Unavailable,0.509567
+HTTP Error 308: Permanent Redirect,0.488769
+[Errno 61] Connection refused,0.46797
+"HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Found",0.457571
+[Errno 54] Connection reset by peer,0.249584
+encoding with 'idna' codec failed (UnicodeError: label too long),0.207987
+HTTP Error 404: ,0.197587
+"HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Moved Temporarily",0.187188
+HTTP Error 403: FORBIDDEN,0.176789
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1129),0.166389
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129),0.166389
+HTTP Error 410: Gone,0.15599
+HTTP Error 405: Not Allowed,0.15599
+HTTP Error 500: ,0.124792
+Remote end closed connection without response,0.124792
+HTTP Error 403: Not authenticated.,0.114393
+HTTP Error 500: Server Error,0.103993
+HTTP Error 417: Expectation Failed,0.103993
+HTTP Error 429: Request denied,0.103993
+[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129),0.103993
+"HTTP Error 301: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Moved Permanently",0.083195
+no host given,0.083195
+"HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+",0.083195
+unknown url type: mailto,0.072795
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.ncahigherlearningcommission.org'. (_ssl.c:1129)",0.062396
+EOF occurred in violation of protocol (_ssl.c:1129),0.062396
+HTTP Error 403: ,0.062396
+HTTP Error 409: Conflict,0.051997
+HTTP Error 308: Redirected Permanently,0.051997
+HTTP Error 599: ,0.051997
+HTTP Error 404: 404,0.051997
+HTTP Error 404: NOT FOUND,0.041597
+HTTP Error 300: Multiple Choices,0.041597
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.texashomelandsecurity.com'. (_ssl.c:1129)",0.041597
+'ascii' codec can't encode character '\xf1' in position 57: ordinal not in range(128),0.041597
+HTTP Error 404: Content Not Found,0.031198
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1129),0.031198
+HTTP Error 403: HTTP Forbidden,0.031198
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'seiventures.com'. (_ssl.c:1129)",0.031198
+'ascii' codec can't encode character '\xf1' in position 9: ordinal not in range(128),0.031198
+HTTP Error 302: Found - Redirection to url 'mailto:?subject=&body=https%3A%2F%2Fwww.ccny.cuny.edu%2Fcompsci%2Fbs-computer-science' is not allowed,0.031198
+unknown url type: javascript,0.031198
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'bls.gov'. (_ssl.c:1129)",0.031198
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.osu-tulsa.okstate.edu'. (_ssl.c:1129)",0.031198
+HTTP Error 500: 500,0.031198
+HTTP Error 503: Service Temporarily Unavailable,0.031198
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_440_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=440',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_475_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=475',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_474_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=474',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_467_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=467',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_466_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=466',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_452_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=452',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_441_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=441',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_412_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=412',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_432_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=432',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_407_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=407',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BME_494_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BME&catalogNbr=494',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BME_416_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BME&catalogNbr=416',0.020799
+'ascii' codec can't encode character '\u200b' in position 210: ordinal not in range(128),0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BME_413_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BME&catalogNbr=413',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BME_350_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BME&catalogNbr=350',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BIO_345_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BIO&catalogNbr=345',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BIO_343_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BIO&catalogNbr=343',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_483_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=483',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_434_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=434',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_465_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=465',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_425_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=425',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BCH_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BCH&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MSE_415_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MSE&catalogNbr=415',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/STP_427_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=STP&catalogNbr=427',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MSE_335_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MSE&catalogNbr=335',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MEE_446_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MEE&catalogNbr=446',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_461_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=461',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MEE_434_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MEE&catalogNbr=434',0.020799
+unknown url type: *** broken d,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MEE_351_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MEE&catalogNbr=351',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAE_455_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAE&catalogNbr=455',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAE_436_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAE&catalogNbr=436',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAE_417_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAE&catalogNbr=417',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAE_404_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAE&catalogNbr=404',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAE_341_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAE&catalogNbr=341',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_475_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=475',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_474_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=474',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_470_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=470',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BIO_340_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BIO&catalogNbr=340',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_475_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=475',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BCH_461_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BCH&catalogNbr=461',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_442_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=442',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_460_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=460',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_411_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=411',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_360_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=360',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_350_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=350',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_311_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=311',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CIS_415_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CIS&catalogNbr=415',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/PHY_361_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=PHY&catalogNbr=361',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_469_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=469',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_461_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=461',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_481_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=481',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_443_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=443',0.020799
+HTTP Error 301: Moved Permanently - Redirection to url 'mailto:kjones@whitworth.edu/' is not allowed,0.020799
+HTTP Error 301: Moved Permanently - Redirection to url 'tel:5097771000/' is not allowed,0.020799
+HTTP Error 301: Moved Permanently - Redirection to url 'mailto:mailto:qmao@whitworth.edu/' is not allowed,0.020799
+HTTP Error 301: Moved Permanently - Redirection to url 'mailto:mailto:sgriffith@whitworth.edu/' is not allowed,0.020799
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.ogp.columbia.edu'. (_ssl.c:1129)",0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CPI_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CPI&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_320_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=320',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/BCH_361_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=BCH&catalogNbr=361',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_335_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=335',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AME_435_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AME&catalogNbr=435',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AME_430_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AME&catalogNbr=430',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_468_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=468',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CEE_486_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CEE&catalogNbr=486',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_342_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=342',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CHE_432_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CHE&catalogNbr=432',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_325_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=325',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_404_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=404',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_360_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=360',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_350_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=350',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_335_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=335',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_333_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=333',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_304_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=304',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/DAT_402_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=DAT&catalogNbr=402',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/DAT_401_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=DAT&catalogNbr=401',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/DAT_301_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=DAT&catalogNbr=301',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/DAT_300_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=DAT&catalogNbr=300',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/PHY_302_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=PHY&catalogNbr=302',0.020799
+HTTP Error 301: Moved Permanently - Redirection to url 'mailto:ptucker@whitworth.edu/' is not allowed,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/STP_425_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=STP&catalogNbr=425',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_360_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=360',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAT_343_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAT&catalogNbr=343',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_445_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=445',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_434_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=434',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_412_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=412',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_330_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=330',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_340_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=340',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ENG_105_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ENG&catalogNbr=105',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_365_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=365',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ENG_107_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ENG&catalogNbr=107',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_110_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=110',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ENG_102_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ENG&catalogNbr=102',0.020799
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.abet.org.'. (_ssl.c:1129)",0.020799
+HTTP Error 404: Page not found,0.020799
+HTTP Error 404: File Not Found,0.020799
+HTTP Error 504: Gateway Time-out,0.020799
+[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129),0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ENG_101_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ENG&catalogNbr=101',0.020799
+'ascii' codec can't encode character '\u2013' in position 95: ordinal not in range(128),0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_485_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=485',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_486_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=486',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_415_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=415',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_426_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=426',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/PHY_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=PHY&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAT_267_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAT&catalogNbr=267',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_259_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=259',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_230_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=230',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_240_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=240',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAT_243_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAT&catalogNbr=243',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_355_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=355',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_120_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=120',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAT_266_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAT&catalogNbr=266',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_205_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=205',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/MAT_265_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=MAT&catalogNbr=265',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/FSE_100_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=FSE&catalogNbr=100',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ENG_108_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ENG&catalogNbr=108',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_310_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=310',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_380_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=380',0.020799
+[Errno 65] No route to host,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_462_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=462',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/ASU_101-CSE_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=ASU&catalogNbr=101-CSE',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/CSE_301_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=CSE&catalogNbr=301',0.020799
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'asu.interviewstream.com'. (_ssl.c:1129)",0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_463_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=463',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_459_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=459',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_455_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=455',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_448_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=448',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_445_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=445',0.020799
+'ascii' codec can't encode character '\u200b' in position 211: ordinal not in range(128),0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_439_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=439',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_437_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=437',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_436_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=436',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_435_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=435',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_456_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=456',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_458_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=458',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/STP_429_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=STP&catalogNbr=429',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/SER_422_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=SER&catalogNbr=422',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/SER_423_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=SER&catalogNbr=423',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/STP_421_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=STP&catalogNbr=421',0.020799
+[Errno 51] Network is unreachable,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/SER_421_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=SER&catalogNbr=421',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_460_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=460',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_431_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=431',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_470_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=470',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_381_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=381',0.020799
+'ascii' codec can't encode character '\u2013' in position 50: ordinal not in range(128),0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_471_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=471',0.020799
+HTTP Error 400: ,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_471_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=471',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/AEE_463_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=AEE&catalogNbr=463',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_426_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=426',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_412_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=412',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_385_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=385',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_433_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=433',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/IEE_376_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=IEE&catalogNbr=376',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/FSE_301_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=FSE&catalogNbr=301',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_473_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=473',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_480_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=480',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/EEE_481_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=EEE&catalogNbr=481',0.020799
+HTTP Error 401: ,0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/FSE_394_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=FSE&catalogNbr=394',0.020799
+unknown url type: '/major-map/courseInfo?tooltipUrl=/programs/tooltipdynamic/course2/FSE_404_&catalogUrl=https://catalog.apps.asu.edu/catalog/courses/courselist?subject=FSE&catalogNbr=404',0.020799
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|co&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.becambridge.com'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|fr&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|fi&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|gl&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|et&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|eo&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|nl&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|da&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|cs&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|hr&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|tl&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|bs&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|zh-TW&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|zh-CN&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ny&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ceb&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ca&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|my&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|bg&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|bn&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|be&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|eu&hl=en&anno=0&ie=UTF8',0.010399
+'latin-1' codec can't encode character '\u200b' in position 4: ordinal not in range(256),0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|az&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.acalog.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'libguides.park.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 403: 403,0.010399
+HTTP Error 451: ,0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ar&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.html5.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.goblueraiders.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cals_cr.virtualadviser.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'em.emergency.appstate.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 401: Authorization Required,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'my.tougaloo.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.showplacearena.com'. (_ssl.c:1129)",0.010399
+[SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1129),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.artsys.usmd.edu'. (_ssl.c:1129)",0.010399
+unknown url type: hhttp,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.hutchcollegian.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.manoa.hawaii.edu'. (_ssl.c:1129)",0.010399
+unknown url type: '/https/myallenuniversityedu/ics/admissions/admissionshomepagejnzformnameundergraduate20admissions20applicationportletapplyonline',0.010399
+encoding with 'idna' codec failed (UnicodeError: label empty or too long),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jobs.paralegal.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.bookstore.westga.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 308: PERMANENT REDIRECT,0.010399
+HTTP Error 308: ,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.utepbookstore.com'. (_ssl.c:1129)",0.010399
+HTTP Error 301: TYPO3 RealURL redirect - Redirection to url 'javascript:void(0)/' is not allowed,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'nbp.rutgers.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.blog.alliance.edu.in'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.shepherdbook.com'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|hy&hl=en&anno=0&ie=UTF8',0.010399
+'ascii' codec can't encode character '\xa0' in position 21: ordinal not in range(128),0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|am&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sq&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ht&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|af&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'alumnae.alverno.edu'. (_ssl.c:1129)",0.010399
+nonnumeric port: '//www.office.com/v2/OfficeHome.All&response_mode=form_post&nonce=637830467677390788.MzE3ODEwMzUtMzU4Mi00YjJiLWJiNGItODc4ZmM5M2JiNzkxMTFmNjQ0MWEtOTljYy00OTA3LWJmNzMtY2NmY2RmN2Q1YjRi&ui_locales=en-US&mkt=en-US&client-request-id=d44c8165-cea3-412e-9890-7c7a9a9e2968&state=ZpJaAcc76CF9Jh6-lQA4-Dfx57CW4GSsuJLQ88VDsr_Z7eMuZ3F3eajdJRuFPPFtKiRWx5V6LZXxTgo4DuAhRst_Xam8WCs248uFcCHkGgiW4RnWGZZsDH5F9pz_NZsex2c9o4k6ja7jMA0Ho2aR5Mkjl0dqTHXmAPyf1rHl_I6eqpOebeQuCGWU7JACoXDZsiC6e-CUyv1zaxAPcykagC_JD-2khoSTxqjrrz8EUTr_bdRdkUJRcNaswg_RDie_wUobqItkugp9vF14mr8N_w&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'library.strose.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 410: Not Found,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'global.limestone.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.bulletin.uga.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.una.bkstr.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.michaelwehar.com'. (_ssl.c:1129)",0.010399
+HTTP Error 404: not found,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.seattlecolleges.com'. (_ssl.c:1129)",0.010399
+'ascii' codec can't encode character '\u200b' in position 12: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.txstatebobcats.com'. (_ssl.c:1129)",0.010399
+HTTP Error 502: Bad Gateway,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'libguides.wells.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.alcornstate.bkstr.com'. (_ssl.c:1129)",0.010399
+HTTP Error 301: Moved Permanently - Redirection to url 'tel:717-477-7447/' is not allowed,0.010399
+HTTP Error 301: Moved Permanently - Redirection to url 'tel:717-477-1178/' is not allowed,0.010399
+IncompleteRead(93609 bytes read),0.010399
+HTTP Error 301: Moved Permanently - Redirection to url 'javascript:void(0);/' is not allowed,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.umes.bncollege.com'. (_ssl.c:1129)",0.010399
+'ascii' codec can't encode character '\u200e' in position 33: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'webmail.stonehill.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'lchousing.lincolncollege.edu'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ha&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|haw&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|iw&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ko&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ka&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|de&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|el&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|jw&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mk&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|lb&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|lt&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|lv&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|la&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|lo&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ku&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|km&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|hi&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|kk&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|kn&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ja&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|gu&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|it&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ga&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|id&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ig&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|is&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|hu&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|hmn&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.lastfm.com'. (_ssl.c:1129)",0.010399
+"HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Temporary Redirect",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mg&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ru&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|es&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|so&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sl&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sk&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|si&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sd&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sn&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|st&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sr&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sm&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ta&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ro&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sw&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|pa&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|pt&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|pl&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|fa&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ps&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|no&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ne&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mn&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mr&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mi&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|tg&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|su&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|sv&hl=en&anno=0&ie=UTF8',0.010399
+nonnumeric port: '//www.office.com/v2/OfficeHome.All&response_mode=form_post&nonce=638276447503657653.ZWYyMDVmYTUtOWQ2NC00N2E5LWFiMzAtZWI4N2IyMWY2MmEyZTg0OTQ2NGEtNTRhMC00NTNjLTg3MGItM2U0ZWUwYmM4ZjUw&ui_locales=en-US&mkt=en-US&client-request-id=88fa71dd-461c-42ad-8ab9-a501e213b0f3&state=mqIJMduUvOpurk2xx8CWKMVxhrZXx8_2HhY2TAXOTszSCQZrTcMVRdM3Nl_EyEBQzkLjujRvJgUVOfrIKcJQoZrN8Dnf5eOLbnkdBv-sqN-D2b9SdWgwPhfARiy56PF_TjPDrB_RU6Amrxpz3_JIRktJ75GF-kyfnLhagEW1wRhZBwF2PtIUIPUDrV45C8aVlDW2I9GJn7jpw_YRHC23Q2G0LKDFNsPNzmdlUTDRaaTDHrrWssRXSVEMIj8k3z3gDnBP7DrZ0Hrq6-ifkajnwg&x-client-SKU=ID_NET6_0&x-client-ver=6.30.1.0',0.010399
+HTTP Error 404: Not Found on Accelerator,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.owlbookshop.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'citruscollege.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'ms1.wilson.edu'. (_ssl.c:1129)",0.010399
+nonnumeric port: '443/lawschool/',0.010399
+'ascii' codec can't encode character '\u2013' in position 16: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'alumni.sullivan.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail.tvcc.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.learnlab.org'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.frc.ri.cmu.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.enrollment.vcu.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.eservices.vcu.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'giveto.asurams.edu'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|gd&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'connect.castleton.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.hcii.cs.cmu.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.vikingoutfitters.com'. (_ssl.c:1129)",0.010399
+HTTP Error 308: Moved,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.engagecsu.com'. (_ssl.c:1129)",0.010399
+'ascii' codec can't encode character '\u2013' in position 62: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.schoolwires.com'. (_ssl.c:1129)",0.010399
+"unknown url type: '/academics/credit_programs/%20<a%20href=""http:/catalog.sunyulster.edu/preview_program.php?catoid=7&poid=424&returnto=188""><button%20class=""btn%20btn-success%20%20btn-lg"">Computer%20Science%20Curriculum</button></a>'",0.010399
+HTTP Error 403: ModSecurity Action,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'sso.oakwood.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.gbc.bkstr.com'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|te&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'ltcc.omniweb.cloud'. (_ssl.c:1129)",0.010399
+HTTP Error 436: status code 436,0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ms&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ml&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.humsci.auburn.edu'. (_ssl.c:1129)",0.010399
+'ascii' codec can't encode character '\u2013' in position 13: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'campaign.lyon.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.wagnercollegeshop.com'. (_ssl.c:1129)",0.010399
+HTTP Error 404: Resource not found,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.grad.auburn.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.alumni.life.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.spartanbookstore.com'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|mt&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ky&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.library.skagit.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 418: ,0.010399
+HTTP Error 504: Target in maintenance,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.maps.tcu.edu'. (_ssl.c:1129)",0.010399
+unknown url type: '#https://play.google.com/store/apps/details?id=com.languagepal2.piikaniandroid&hl=en_US',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.shopslcc.com'. (_ssl.c:1129)",0.010399
+unknown url type: '/Shibboleth.sso/Login?target=https%3A//cs.duke.edu/basicshib/login%3Fafter_login%3D/undergraduate/bulletin-fall2023-undergrads',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.averett.bkstr.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.library.tcu.edu'. (_ssl.c:1129)",0.010399
+unknown url type: chrome-extension,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.iowafuellab.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.iowacentralcollegian.com'. (_ssl.c:1129)",0.010399
+unknown url type: '/programs/print.html?url=https://und.edu/programs/computer-science-bs/index.html',0.010399
+HTTP Error 404: Not found,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'me.engr.ku.edu'. (_ssl.c:1129)",0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|th&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|tr&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|undefined&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|zu&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|yo&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|yi&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|xh&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|fy&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|cy&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|vi&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|uz&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|ur&hl=en&anno=0&ie=UTF8',0.010399
+unknown url type: '//translate.google.com/translate?u=https%3A%2F%2Fcatalog.bccc.edu%2F&langpair=en|uk&hl=en&anno=0&ie=UTF8',0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.shopthehoundstore.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.shopoilers.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.txcrews.org'. (_ssl.c:1129)",0.010399
+[Errno 22] Invalid argument,0.010399
+HTTP Error 400: Nothing to read,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.montclair.bkstr.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jcjc.catalog.acalog.com'. (_ssl.c:1129)",0.010399
+'ascii' codec can't encode character '\xf1' in position 15: ordinal not in range(128),0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.craftonhillscampusstore.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www2.umf.maine.edu'. (_ssl.c:1129)",0.010399
+HTTP Error 404: File not found,0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.thebeaconatchesapeake.wordpress.com'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'ae.engr.ku.edu'. (_ssl.c:1129)",0.010399
+"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.fordhallforum.org'. (_ssl.c:1129)",0.010399

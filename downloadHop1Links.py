@@ -89,7 +89,8 @@ def worker(university, file):
                 f = open("./courseListings/" + university + "/" + str(i) + '.html', 'w')
                 f.write(webContent)
                 f.close()
-                print(f"Sublink for {university} loaded in {load_time:.2f} seconds")
+                if load_time > 4:
+                    print(f"Sublink for {university} loaded in {load_time:.2f} seconds")
                 # logging.info(f"Sublink for {university} loaded in {load_time:.2f} seconds")
                 # print("Successfully read and wrote content from link - ", subLink)
                 # Append result to the list
@@ -151,11 +152,11 @@ def exit_handler():
         os.makedirs(storageLocation, exist_ok=True)
         
         # Create a DataFrame from the results
-        df_load_times = pd.DataFrame(load_time_results)
+        df_load_times = pd.DataFrame(pd.Series(load_time_results).tolist())
         # Ensure the directory exists
         os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
         # Save the DataFrame to a CSV file
-        csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+        csv_filename = os.path.join(storageLocation, f'sublinkLoadTime-{startTime}.csv')
         df_load_times.to_csv(csv_filename, index=False)
 
         dfGeneralErrors.to_csv(storageLocation + f'generalErrorUniversities-{startTime}.csv', index = False)
@@ -208,11 +209,11 @@ for university, process in processes:
     if(ct % 25 == 0):
                 
         # Create a DataFrame from the results
-        df_load_times = pd.DataFrame(load_time_results)
+        df_load_times = pd.DataFrame(pd.Series(load_time_results).tolist())
         # Ensure the directory exists
         os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
         # Save the DataFrame to a CSV file
-        csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+        csv_filename = os.path.join(storageLocation, f'sublinkLoadTime-{startTime}.csv')
         df_load_times.to_csv(csv_filename, index=False)
 
         print("Saving progress.")
@@ -235,11 +236,11 @@ pool.join()
 print("All processes closed and joined.")
 
 # Create a DataFrame from the results
-df_load_times = pd.DataFrame(load_time_results)
+df_load_times = pd.DataFrame(pd.Series(load_time_results).tolist())
 # Ensure the directory exists
 os.makedirs(os.path.dirname(storageLocation), exist_ok=True)
 # Save the DataFrame to a CSV file
-csv_filename = os.path.join(storageLocation, 'sublinkLoadTime.csv')
+csv_filename = os.path.join(storageLocation, f'sublinkLoadTime-{startTime}.csv')
 df_load_times.to_csv(csv_filename, index=False)
 
 print(f"Load times have been saved to {csv_filename}")
